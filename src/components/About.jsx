@@ -16,7 +16,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px 0px -8% 0px" }}
             transition={{ duration: 0.7 }}
           >
             <span className="text-xs font-semibold tracking-[0.2em] text-blue-400">ABOUT THE INSTITUTE</span>
@@ -42,7 +42,7 @@ export default function About() {
                 key={c.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, margin: "0px 0px -5% 0px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="glass gradient-border group rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-1"
               >

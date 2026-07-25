@@ -19,7 +19,7 @@ export default function WhatYouWillLearn() {
               key={topic}
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "0px 0px -5% 0px" }}
               transition={{ duration: 0.4, delay: (i % 6) * 0.06 }}
               className="glass flex items-center gap-4 rounded-xl border border-white/5 px-5 py-4 transition-colors duration-300 hover:border-gold/40"
             >

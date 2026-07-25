@@ -3,7 +3,7 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 export default function Counter({ to, suffix = "", prefix = "", duration = 2 }) {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, margin: "0px 0px -6% 0px" });
   const motionValue = useMotionValue(0);
   const spring = useSpring(motionValue, { duration: duration * 1000, bounce: 0 });
 

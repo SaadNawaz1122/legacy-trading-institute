@@ -29,7 +29,7 @@ export default function Contact() {
             onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "0px 0px -6% 0px" }}
             transition={{ duration: 0.6 }}
             className="gradient-border glass rounded-2xl p-7 lg:col-span-3 md:p-9"
           >
@@ -91,7 +91,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "0px 0px -6% 0px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex flex-col gap-5 lg:col-span-2"
           >

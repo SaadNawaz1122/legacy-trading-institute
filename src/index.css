@@ -216,6 +216,25 @@ html, body {
   .cursor-dot, .cursor-ring { display: none; }
 }
 
+/* ---------- Mobile performance: reduce heavy blur/backdrop-filter load ---------- */
+@media (max-width: 767px) {
+  .glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(17, 27, 52, 0.75);
+  }
+  .animate-pulse-glow {
+    animation: pulseGlowMobile 5s ease-in-out infinite;
+  }
+  @keyframes pulseGlowMobile {
+    0%, 100% { opacity: 0.35; filter: blur(30px); }
+    50% { opacity: 0.55; filter: blur(40px); }
+  }
+  .bg-grid-animated {
+    animation: none;
+  }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

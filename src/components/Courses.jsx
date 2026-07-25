@@ -22,7 +22,7 @@ export default function Courses() {
               key={c.name}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "0px 0px -5% 0px" }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
               className="gradient-border glass group flex flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-2"
             >

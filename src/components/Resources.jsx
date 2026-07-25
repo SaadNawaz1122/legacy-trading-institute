@@ -32,7 +32,7 @@ export default function Resources() {
                 key={r.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, margin: "0px 0px -5% 0px" }}
                 transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
                 className="gradient-border glass group block rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5"
               >

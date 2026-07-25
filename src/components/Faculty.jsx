@@ -57,7 +57,7 @@ export default function Faculty() {
               key={f.name}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "0px 0px -5% 0px" }}
               transition={{
                 duration: 0.5,
                 delay: (i % 4) * 0.1,

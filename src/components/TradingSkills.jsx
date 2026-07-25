@@ -19,7 +19,7 @@ export default function TradingSkills() {
               key={skill}
               initial={{ opacity: 0, scale: 0.85 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "0px 0px -5% 0px" }}
               transition={{ duration: 0.35, delay: (i % 12) * 0.04 }}
               whileHover={{ scale: 1.07, y: -3 }}
               className="gradient-border glass cursor-default rounded-full px-6 py-3 text-sm font-medium text-gray-100 transition-colors hover:text-gold"

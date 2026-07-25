@@ -24,7 +24,7 @@ export default function FAQ() {
                 key={item.q}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, margin: "0px 0px -5% 0px" }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className={`gradient-border glass overflow-hidden rounded-xl transition-colors ${isOpen ? "border-gold/30" : ""}`}
               >
