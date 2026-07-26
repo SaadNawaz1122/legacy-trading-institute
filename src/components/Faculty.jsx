@@ -27,6 +27,12 @@ const faculty = [
     years: "5+ Years",
     image: "/images/Head.jpg",
   },
+   {
+    name: "Ahmad Raza",
+    role: "Expert Analyst",
+    years: "3+ Years",
+    image: "/images/Analyst.jpg",
+  },
 ];
 
 export default function Faculty() {
@@ -50,7 +56,7 @@ export default function Faculty() {
         </div>
 
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
 
           {faculty.map((f, i) => (
             <motion.div
