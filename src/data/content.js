@@ -25,7 +25,7 @@ export const courses = [
     desc: "One complete program covering everything a trader needs, from first principles to institutional-level execution.",
     duration: "12 Weeks",
     level: "All Levels",
-    price: "$130",
+    price: "$150",
     gradient: "from-blue-500/20 to-transparent",
     subheadings: [
       "Forex Fundamentals",
