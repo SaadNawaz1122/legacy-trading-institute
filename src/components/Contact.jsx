@@ -56,7 +56,8 @@ export default function Contact() {
                 <label className="mb-2 block text-xs font-medium text-text-gray">Phone</label>
                 <input
                   type="tel"
-
+                  inputMode="tel"
+                  placeholder="+92 3XX XXXXXXX"
                   className="w-full rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-text-gray/60 outline-none transition-colors focus:border-gold"
                 />
               </div>
@@ -100,27 +101,31 @@ export default function Contact() {
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold/15 text-gold">
                   <FaMapMarkerAlt />
                 </span>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm font-medium text-white">Office Address</p>
-                  <p className="mt-1 text-sm text-text-gray">Pansera Road , Gojra opposite to CakeTime</p>
+                  <p className="mt-1 break-words text-sm text-text-gray">Pansera Road , Gojra opposite to CakeTime</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold/15 text-gold">
                   <FaPhoneAlt />
                 </span>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm font-medium text-white">Phone</p>
-                  <p className="mt-1 text-sm text-text-gray">+92 3083797758</p>
+                  <a href="tel:+923083797758" className="mt-1 block break-words text-sm text-text-gray transition-colors hover:text-gold">
+                    +92 3083797758
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold/15 text-gold">
                   <FaEnvelope />
                 </span>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm font-medium text-white">Email</p>
-                  <p className="mt-1 text-sm text-text-gray">contact@legacyittradingagency.com</p>
+                  <a href="mailto:contact@legacyittradingagency.com" className="mt-1 block break-words text-sm text-text-gray transition-colors hover:text-gold">
+                    contact@legacyittradingagency.com
+                  </a>
                 </div>
               </div>
               <a

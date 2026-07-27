@@ -20,14 +20,22 @@ export const whyChooseUs = [
 ];
 
 export const courses = [
-  { name: "Forex Fundamentals", desc: "The foundation every serious trader needs: market structure, sessions, and terminology.", duration: "4 Weeks", level: "Beginner", price: "$149", gradient: "from-blue-500/20 to-transparent" },
-  { name: "Smart Money Concepts", desc: "Trade the way institutions do — liquidity pools, order blocks, and imbalance.", duration: "6 Weeks", level: "Intermediate", price: "$299", gradient: "from-lime-500/20 to-transparent" },
-  { name: "ICT Trading", desc: "Deep-dive into Inner Circle Trader concepts, kill zones, and time-based models.", duration: "8 Weeks", level: "Advanced", price: "$399", gradient: "from-blue-500/20 to-transparent" },
-  { name: "Price Action", desc: "Read raw candlestick behaviour without indicators cluttering your chart.", duration: "5 Weeks", level: "Intermediate", price: "$249", gradient: "from-lime-500/20 to-transparent" },
-  { name: "Scalping", desc: "High-frequency execution strategies for fast, precise intraday entries.", duration: "3 Weeks", level: "Advanced", price: "$199", gradient: "from-blue-500/20 to-transparent" },
-  { name: "Swing Trading", desc: "Capture multi-day moves with a process built for a part-time schedule.", duration: "5 Weeks", level: "Intermediate", price: "$249", gradient: "from-lime-500/20 to-transparent" },
-  { name: "Risk Management", desc: "The discipline layer: sizing, drawdown control, and capital protection rules.", duration: "3 Weeks", level: "All Levels", price: "$179", gradient: "from-blue-500/20 to-transparent" },
-  { name: "Trading Psychology", desc: "Master the mindset behind consistent execution and long-term survival.", duration: "4 Weeks", level: "All Levels", price: "$199", gradient: "from-lime-500/20 to-transparent" },
+  {
+    name: "Forex Bootcamp",
+    desc: "One complete program covering everything a trader needs, from first principles to institutional-level execution.",
+    duration: "12 Weeks",
+    level: "All Levels",
+    price: "$499",
+    gradient: "from-blue-500/20 to-transparent",
+    subheadings: [
+      "Forex Fundamentals",
+      "Technical Analysis",
+      "Smart Money Concepts (SMC)",
+      "Price Action",
+      "Risk Management",
+      "Trading Psychology",
+    ],
+  },
 ];
 
 export const learnTopics = [

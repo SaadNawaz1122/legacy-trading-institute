@@ -3,13 +3,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FaArrowRight, FaChartLine } from "react-icons/fa";
 import AnimatedBackground from "./AnimatedBackground";
 import Counter from "./Counter";
-
-const candles = [
-  { h: 40, o: 20, up: true }, { h: 60, o: 30, up: true }, { h: 35, o: 55, up: false },
-  { h: 70, o: 40, up: true }, { h: 30, o: 60, up: false }, { h: 65, o: 25, up: true },
-  { h: 50, o: 45, up: true }, { h: 42, o: 68, up: false }, { h: 78, o: 38, up: true },
-  { h: 33, o: 58, up: false }, { h: 60, o: 20, up: true }, { h: 48, o: 52, up: false },
-];
+import TradingViewMiniWidget from "./TradingViewMiniWidget";
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -108,42 +102,17 @@ export default function Hero() {
               <div className="flex items-center justify-between border-b border-white/10 pb-3">
                 <div>
                   <p className="text-xs text-text-gray">XAU/USD · Gold Spot</p>
-                  <p className="font-display text-xl font-bold text-white">2,384.62</p>
+                  <p className="font-display text-sm font-semibold text-white">Live Chart</p>
                 </div>
-                <span className="rounded-full bg-green-500/15 px-3 py-1 text-xs font-semibold text-green-400">
-                  +0.84%
+                <span className="flex items-center gap-1.5 rounded-full bg-green-500/15 px-3 py-1 text-xs font-semibold text-green-400">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" /> LIVE
                 </span>
               </div>
 
-              {/* Candlestick chart */}
-              <svg viewBox="0 0 320 160" className="mt-4 h-40 w-full overflow-visible">
-                <line x1="0" y1="40" x2="320" y2="40" stroke="rgba(255,255,255,0.05)" />
-                <line x1="0" y1="80" x2="320" y2="80" stroke="rgba(255,255,255,0.05)" />
-                <line x1="0" y1="120" x2="320" y2="120" stroke="rgba(255,255,255,0.05)" />
-                {candles.map((c, i) => {
-                  const x = i * 27 + 6;
-                  const top = 160 - c.h - c.o;
-                  return (
-                    <g key={i} style={{ transformOrigin: `${x + 5}px 160px` }}>
-                      <line x1={x + 5} y1={top - 8} x2={x + 5} y2={top + c.h + 8} stroke={c.up ? "#3B82F6" : "#FFD700"} strokeWidth="1" opacity="0.5" />
-                      <rect
-                        x={x} y={top} width="10" height={c.h}
-                        fill={c.up ? "#3B82F6" : "#FFD700"}
-                        rx="1.5"
-                        opacity="0.9"
-                        style={{ animation: `candlePulse ${2 + (i % 3)}s ease-in-out infinite`, animationDelay: `${i * 0.15}s` }}
-                      />
-                    </g>
-                  );
-                })}
-                <polyline
-                  points="5,90 30,70 55,95 80,60 105,100 130,65 155,80 180,50 205,85 230,55 255,90 280,60 315,75"
-                  fill="none"
-                  stroke="#FFD700"
-                  strokeWidth="2"
-                  className="animate-draw-line"
-                />
-              </svg>
+              {/* Live chart (real-time data via TradingView) */}
+              <div className="mt-4 h-40 w-full overflow-hidden rounded-lg">
+                <TradingViewMiniWidget symbol="OANDA:XAUUSD" />
+              </div>
 
               <div className="mt-4 grid grid-cols-2 gap-3">
                 <div className="rounded-lg bg-blue-500/10 px-3 py-2 text-center">
